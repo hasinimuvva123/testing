@@ -24,10 +24,6 @@ build {
   }
 
   provisioner "file" {
-    source      = "sql.sh"
-    destination = "/tmp/sql.sh"
-  }
-  provisioner "file" {
     source      = "nodeinstallement.sh"
     destination = "/tmp/nodeinstallement.sh"
   }
@@ -40,10 +36,6 @@ build {
   provisioner "file" {
     source      = "nodeindex.sh"
     destination = "/tmp/nodeindex.sh"
-  }
-
-  provisioner "shell" {
-    script = "sql.sh"
   }
 
   provisioner "shell" {
